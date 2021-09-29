@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <title>Blogs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <form id="post-form">
+                    <center>
+                        <h3>Post Your Amazing Experience Here</h3>
+                    </center>
+                    <div>What was the Location?</div>
+                    <textarea id="place_name" class="form-control" rows="1" placeholder="Taj Mahal"></textarea>
+                    <div>How was your experience.....</div>
+                    <textarea id="post" class="form-control" rows="10" maxlength="1000"
+                        placeholder="Taj Mahal is regarded by many as the best example of Mughal architecture and a symbol of India's rich history........."></textarea>
+                    <div>How much do you rate the place?</div>
+                    <div class="rate" id="rating">
+                        <input type="radio" id="star5" name="rate" value="5" />
+                        <label for="star5" title="text">5 stars</label>
+                        <input type="radio" id="star4" name="rate" value="4" />
+                        <label for="star4" title="text">4 stars</label>
+                        <input type="radio" id="star3" name="rate" value="3" />
+                        <label for="star3" title="text">3 stars</label>
+                        <input type="radio" id="star2" name="rate" value="2" />
+                        <label for="star2" title="text">2 stars</label>
+                        <input type="radio" id="star1" name="rate" value="1" />
+                        <label for="star1" title="text">1 star</label>
+                    </div>
+                    <br>
+                    <br>
+                    <div>Enter the most beautiful photo of the site here </div>
+                    <input type="file" class="form-control" id="image" accept="images/*"><br>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+        <br>
+
+        <div class="row mt-5" id="posts">
+
+        </div>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyDk0B0WUPeKFh0vB6RTycTOZoBFHFVZFak",
+            authDomain: "blogs-d45f8.firebaseapp.com",
+            databaseURL: "https://blogs-d45f8-default-rtdb.firebaseio.com",
+            projectId: "blogs-d45f8",
+            storageBucket: "blogs-d45f8.appspot.com",
+            messagingSenderId: "734779038026",
+            appId: "1:734779038026:web:02d0f63708bbd4fd0e09b3",
+            measurementId: "G-MCMT6MJHLM"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="defualt.js"></script>
+</body>
+
+</html>
